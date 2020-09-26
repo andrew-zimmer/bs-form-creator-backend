@@ -4,7 +4,7 @@ class V1::SessionsController < ApplicationController
         if @user&.valid_password?(params[:password])
             render :create, status: :created
         else
-            head(:unauthorized)
+            render json: {errors: @user.errors.full_messages}
         end
     end
 

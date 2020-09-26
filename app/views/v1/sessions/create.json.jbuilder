@@ -5,7 +5,8 @@ json.data do
             :email,
             :id,
             :username,
-            :authentication_token
+            :authentication_token,
+            :forms
         )
     end
 end

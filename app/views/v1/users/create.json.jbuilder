@@ -4,5 +4,6 @@ json.data do
         json.email @user.email
         json.authentication_token @user.authentication_token
         json.username @user.username
+        json.forms @user.forms
     end
 end

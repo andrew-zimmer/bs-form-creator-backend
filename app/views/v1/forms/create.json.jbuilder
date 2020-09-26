@@ -1,9 +1,9 @@
 json.data do
-    json.user do
+    json.form do
         json.call(
             @form,
             :form,
-            :id
+            :id,
         )
     end
 end

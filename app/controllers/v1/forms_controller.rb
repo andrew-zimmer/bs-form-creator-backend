@@ -1,7 +1,9 @@
 module V1
     class FormsController < ApplicationController
+        before_action :authenticate_user!
 
         def create
+
             @form = Form.new(forms_params)
             if @form.save
                 render :create
@@ -30,7 +32,7 @@ module V1
 
         private
         def forms_params
-            params.require(:forms).permit(:form, users_form_attributes: [:user_id])
+            params.require(:forms).permit(:form, :user_id)
         end
     end
 end
